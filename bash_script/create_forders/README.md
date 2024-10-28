@@ -1,38 +1,38 @@
-# Create Forder Bash Script
+## Create Forder Bash Script
 
-## 概要
-このスクリプトは、指定されたベースディレクトリ内に特定のフォルダを作成するために設計されています。
-ユーザーに対して、特定のカテゴリのフォルダを作成するかどうか尋ね、その回答に基づいてフォルダを作成します。
-作成が完了した後、すべての作成されたフォルダの一覧を表示します。
+## Overview
+This script is designed to create specific folders in a given base directory.
+It asks the user if he/she wants to create folders in a particular category, and creates folders based on the user's response.
+After creation is complete, it displays a list of all created folders.
 
-## 使用方法
-1. **スクリプトの準備**: スクリプトを任意のディレクトリに保存し、ファイルに実行権限を与えます。
+## How to use
+1. **PREPARE THE SCRIPT**: Save the script in a directory of your choice and give the file execute permission.
    ```bash
    chmod +x create_folders.sh
-   ```
-2. **スクリプトの実行**: スクリプトにベースディレクトリのパスを引数として渡して実行します。
+   ```` 2.
+**Execute the script**: Run the script passing the path of the base directory as an argument.
    ```bash
-   ./create_folders.sh /path/to/base/directory
+   . /create_folders.sh /path/to/base/directory
    ```
 
-## 要件
-- **シェル**: このスクリプトは Bash シェルで動作するように設計されています。
-- **システム**: Linux または macOS のような UNIX ベースのオペレーティングシステムが必要です。
-- **パーミッション**: スクリプトを実行するユーザーは、指定されたディレクトリに対する書き込み権限を持っている必要があります。
+## Requirements.
+- **Shell**: This script is designed to run in the Bash shell.
+- **System**: A UNIX-based operating system such as Linux or macOS is required.
+- **Permissions**: The user executing the script must have write permission to the specified directory.
 
-## スクリプトの流れ
-1. **ディレクトリ存在確認**: 指定されたベースディレクトリが存在するかどうかを確認します。
-2. **質問**: ユーザーに対して、特定のフォルダを作成するかどうか質問します。
-3. **フォルダ作成**: ユーザーの回答が 'y' の場合、指定されたフォルダを作成します。
-4. **結果の表示**: 作成されたフォルダの一覧を表示します。
+## Script flow
+1. **Directory Existence Check**: Checks if the specified base directory exists. 2.
+2. **Question**: Ask the user if he/she wants to create a specific folder. 3.
+**Create Folder**: If the user answers 'y', the specified folder is created. 4.
+**Display Results**: Displays a list of the folders created.
 
-## 使用例
-以下は、スクリプトを使用する一般的な例です。
+## Example Usage
+The following is a general example of using the script.
 ```bash
-./create_folders.sh /Users/exampleuser/projects/myproject
+. /create_folders.sh /Users/exampleuser/projects/myproject
 ```
-このコマンドは、`/Users/exampleuser/projects/myproject` ディレクトリ内にフォルダを作成するプロセスを開始します。
+This command starts the process of creating folders in the `/Users/exampleuser/projects/myproject` directory.
 
-## 注意事項
-- このスクリプトはユーザーからの入力を必要とします。自動化スクリプト内で使用する場合は、予め回答をスクリプトに組み込む必要があります。
-- フォルダの作成に失敗した場合、エラーメッセージが表示され、スクリプトが終了します。
+## Notes.
+- This script requires input from the user. If used within an automated script, the answers must be incorporated into the script beforehand.
+- If the folder creation fails, an error message will be displayed and the script will exit.
